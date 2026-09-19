@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reserva de equipamento escolar</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  
+  <body>
+
+  Aluno: ERICK DE LUNA
+    
+    <h2>Aluguel de equipamentos FATEC</h2>
+
+    <form id="innerForm" method="post" onsubmit="tratamentoAluguel()">
+      <div id="form-container">
+        <div id="nome-container">
+          <label for="nomeAlunoInput">Nome do Aluno</label>
+          <input type="text" name="nomeAluno" id="nomeAlunoInput" />
+        </div>
+
+        <label for="radio-container" style="margin-top: 30px"
+          >Selecione o turno</label
+        >
+        <div class="radio-container">
+          <div class="radio-item">
+            <label for="turnoAlunoInput1">Manhã</label>
+            <input
+              type="radio"
+              name="turnoAluno"
+              id="turnoAlunoInput1"
+              value="manhã"
+            />
+          </div>
+
+          <div class="radio-item">
+            <label for="turnoAlunoInput2">| Tarde</label>
+
+            <input
+              type="radio"
+              name="turnoAluno"
+              id="turnoAlunoInput2"
+              value="Tarde"
+            />
+          </div>
+
+          <div class="radio-item">
+            <label for="turnoAlunoInput3">| Noite</label>
+            <input
+              type="radio"
+              name="turnoAluno"
+              id="turnoAlunoInput3"
+              value="Noite"
+            />
+          </div>
+        </div>
+
+        <div id="selector-container">
+          <label>Selecione o ciclo</label>
+          <select name="cicloSelector" id="seletorCiclo">
+            <option value="Ciclo 1°">Ciclo 1°</option>
+            <option value="Ciclo 2°">Ciclo 2°</option>
+            <option value="Ciclo 2°">Ciclo 3°</option>
+            <option value="Ciclo 2°">Ciclo 4°</option>
+            <option value="Ciclo 2°">Ciclo 5°</option>
+            <option value="Ciclo 2°">Ciclo 6°</option>
+          </select>
+        </div>
+
+        <input
+          type="button"
+          value="Enviar"
+          id="sendbutton"
+          onclick="tratamentoAluguel()"
+        />
+      </div>
+    </form>
+
+    <div id="containerResult"></div>
+  </body>
+</html>
